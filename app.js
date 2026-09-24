@@ -3,7 +3,7 @@ import { createIcons, Monitor, Moon, Sun, TriangleAlert, X } from "lucide";
 const CLIENT_VERSION = "0.0.1";
 const WEBSOCKET_URL = "wss://gcli.ggchan.dev/api/build/ws";
 const GOOGLE_API_ROOT = "https://generativelanguage.googleapis.com/v1beta/models";
-const BUILD_API_KEY = String(process.env.API_KEY || process.env.GEMINI_API_KEY || "").trim();
+const BUILD_API_KEY = import.meta.env.VITE_API_KEY || "";
 const MAX_ACTIVITY_ROWS = 30;
 const MAX_ERROR_MESSAGE_LENGTH = 1000;
 const MAX_ERROR_BODY_DISPLAY_LENGTH = 64 * 1024;
